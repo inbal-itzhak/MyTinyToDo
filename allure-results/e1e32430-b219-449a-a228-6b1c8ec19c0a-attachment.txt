@@ -1,0 +1,5 @@
+click on Inbal Todo
+enter text: task number 1 Inbal
+click on 'All Tasks'
+get 'task number 1 Inbal' task from the list
+task number 1 Inbal

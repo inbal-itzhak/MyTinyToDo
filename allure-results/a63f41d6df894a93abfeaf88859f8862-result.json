@@ -1,0 +1,51 @@
+{
+  "uuid": "7630ed89-78bf-48ae-9f4b-cd91f8f5ce27",
+  "historyId": "c03f455167a3995c3e1ed91072db72ce",
+  "testCaseId": "eb97068d6a28d81637e48dd17d919da0",
+  "fullName": "MyTinyTodo:MyTinyTodo.Tests.AddSimpleTaskTest.AddSimpleTask()",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-3OBST43"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "NUnit 3"
+    },
+    {
+      "name": "package",
+      "value": "MyTinyTodo.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "AddSimpleTask"
+    },
+    {
+      "name": "testClass",
+      "value": "AddSimpleTaskTest"
+    }
+  ],
+  "links": [],
+  "name": "AddSimpleTask",
+  "status": "passed",
+  "stage": "finished",
+  "steps": [],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e1e32430-b219-449a-a228-6b1c8ec19c0a-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1731490616330,
+  "stop": 1731490635001
+}
