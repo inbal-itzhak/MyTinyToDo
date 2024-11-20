@@ -169,8 +169,7 @@ namespace MyTinyTodo.PageObjects
             {
                 try
                 {
-                    IWebElement task = FindTaskListByName(taskName);
-                    if (task != null)
+                    if (FindTaskListByName(taskName) != null)
                     {
                         IWebElement checkedLine = Driver.FindElement(By.CssSelector(".title - block.title li.title [checked='checked']"));
                         if (checkedLine != null)
@@ -190,15 +189,15 @@ namespace MyTinyTodo.PageObjects
 
         public List<IWebElement> SearchITemsInGeneralList(string searchText) 
         {
+            List<IWebElement> TaskList = new List<IWebElement> ();
             try
             {
+
                 Actions actions = new Actions(Driver);
                 WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
                 Console.WriteLine("click on 'All tasks'");
-                List<IWebElement> TaskList = GetAllTaskLists();
+                TaskList = GetAllTaskLists();
                 Click(TaskList[0]);
-               // wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector("#list_all .title")));
-               // Click(Driver.FindElement(By.CssSelector("#list_all .title")));
                 Thread.Sleep(1000);
                 Console.WriteLine("enter search string in search field");
                 Click(Driver.FindElement(By.CssSelector("#search")));
@@ -208,15 +207,16 @@ namespace MyTinyTodo.PageObjects
                 return allTasks;
                 
             }
-            catch(ArgumentNullException ex)
+            catch(Exception ex)
             {
                 Console.WriteLine($"element not found {ex.Message}");
-                return null;
+                return TaskList;
             }
         }
 
         public List<IWebElement> SearchITemsInSpecificList(string listName, string searchText)
         {
+            List<IWebElement> allTasks = new List<IWebElement> ();
             try
                { 
                 Actions actions = new Actions(Driver);
@@ -224,7 +224,7 @@ namespace MyTinyTodo.PageObjects
                 GetAllTaskLists().FirstOrDefault(taskList => taskList.Text.Contains(listName));
                 FillText(Driver.FindElement(By.CssSelector("#search")), searchText);
                 actions.SendKeys(Keys.Enter).Perform();
-                List<IWebElement> allTasks = GetAllTasks();
+                allTasks = GetAllTasks();
 
                 return allTasks;
             }
@@ -232,7 +232,7 @@ namespace MyTinyTodo.PageObjects
             catch(ArgumentNullException ex)
             {
                 Console.WriteLine($"element not found {ex.Message}");
-                return null;
+                return allTasks;
             }
         }
 
