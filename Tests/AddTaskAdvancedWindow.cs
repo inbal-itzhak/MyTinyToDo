@@ -11,7 +11,6 @@ namespace MyTinyTodo.Tests
 {
     public class AddTaskAdvancedWindow : BaseTest
     {
-      
         [Test]
         public void AddTaskWithParameters()
         {
@@ -35,8 +34,6 @@ namespace MyTinyTodo.Tests
             atp.SaveAdvancedTask();
             Thread.Sleep(1000);
             Assert.That(tp.GetTaskByName(listName, taskName), Is.EqualTo(taskName), $"there is no task by the name of {taskName}");
-
-
         }
     }
 }

@@ -13,7 +13,6 @@ namespace MyTinyTodo.Tests
     [AllureNUnit]
     public class AddSimpleTaskTest : BaseTest
     {
-        
         [Test]
         public void AddSimpleTask()
         {

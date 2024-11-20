@@ -33,8 +33,5 @@ namespace MyTinyTodo.PageObjects
             el.Click();
         }
 
-       
-
-
     }
 }

@@ -12,8 +12,6 @@ namespace MyTinyTodo.Tests
 {
     public class SearchTasks : BaseTest
     {
-     
-
         [Test]
         public void SearchTaskInGeneralList()
         {
@@ -37,7 +35,6 @@ namespace MyTinyTodo.Tests
             Thread.Sleep(1000);
             tp.SearchITemsInSpecificList(listName,taskName);
             Assert.That(tp.GetTaskByName(taskName), Is.Not.Null);
-
         }
        
     }

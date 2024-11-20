@@ -29,7 +29,5 @@ namespace MyTinyTodo.Tests
         {
             driver.Close();
         }
-
-       
     }
 }

@@ -26,7 +26,6 @@ namespace MyTinyTodo.PageObjects
        
         public List<IWebElement> GetAllTasks()
         {
-            
             List<IWebElement> tasks = Driver.FindElements(By.CssSelector("#tasklist .task-title")).ToList();
             return tasks;
         }
@@ -63,7 +62,6 @@ namespace MyTinyTodo.PageObjects
                 {
                     return taskInList.Text;
                 }
-
             }
            
             return string.Empty;
